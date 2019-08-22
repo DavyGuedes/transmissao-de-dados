@@ -162,3 +162,49 @@ __Ideia chave:__
 | Rede | Internet | Host/Rede |
 | Enlace de Dados | Interface Física | Enlace de Dados |
 | Física | | Física |
+
+## Encapsulamento e Desencapsulamento
+
+### Introdução
+Encapsulamento, é processo do qual os dados são passados desde a camada de aplicação até a camada física.
+
+A camada de aplicação fornece os meios para conectividade ponto-a-ponto entre indivíduos na rede humana usando redes de dados.
+
+Quando o computador envia dados, ele viaja através de uma pilha de camadas, cada camada do modelo OSI encapsula os dados adicionando um cabeçalho e às vezes um “resumo” dos dados no próprio dados. Essa empacotamento é chamado de encapsulamento dos dados. 
+
+### Camada de aplicação
+Dados de usuários são iniciados na camada de aplicação, no lado de quem envia os dados.
+Quando os dados são movidos para a camada abaixo de apresentação, eles são codificados ou comprimidos por um formato padronizado, as vezes até criptografado. Após os dados do usuários serem convertidos por um formato padrão comum, ele é movido para a camada de seção.
+
+### Camada de sessão
+Na camada de sessão, identificador de sessão (session ID) é anexado nos dados.
+Nesse ponto, todos os dados são apenas um grande bloco de dados.
+Agora os dados são passados para a camada de transporte, (mantenha em mente que dados encapsulados são chamados por nomes diferentes no momento que são movidos mais para as camadas mais baixas da pilha de camada)
+Esses nomes são os chamados unidades de protocolo de dados (Protocol Data Unit) ou PDU.
+
+### Camada de transporte
+Na camada de transporte, os dados são quebrados em diferentes blocos menores, então esse mesmo dado passa a representar um dos muitos blocos de dados maiores. Então cada bloco é adicionado com um cabeçalho, que contém a porto de destino, porto de origem, número sequencial e outras informações.
+
+Combinando tudo, um novo pacote de dados é criado, um novo pacote de dados é chamado Segmento, se o modelo TCP está sendo usado, ou Datagram se UDP é usado.
+
+Um segmento viaja para a próxima camada inferior, a camada de rede, onde um novo cabeçalho com IP é adicionado. 
+
+### Camada de rede
+Cabeçalho com IP contém o endereço IP destinatário, o endereço IP fonte e outras informações. Na camada de rede, na camada de rede um novo pacote IP também é criado.
+
+Quando o pacote IP é passado para a camada de vinculação de dados, o processo se repete. Um novo cabeçalho é adicionado, e um resumo dos dados são também adicionados ao final do pacote.
+
+Uma nova unidade de dados do protocolo, ou Frame como é chamado, é construído. O cabeçalho do Frame contém o endereço MAC (media access control address) do destinatário, ou endereço fonte MAC e outras informações de controle. Um resumo dos dados marca o fim do Frame, e também é usado como checagem de erro pacote.
+
+### Camada física
+O Frame então é enviado para a camada física, onde é traduzido em um tipo de sinal específico, seja elétrico, ondas de rádio ou luz. Esse Frame então torna-se um tipo de sinal que representa uma série de zeros ou uns, que os números binários, esse é o motivo por qual nas camadas físicas os dados são frequentemente chamados de Bits. O cartão de Interface da Rede ou NIC (Network Interface Card) prepara esses sinais e envia-los em um meio de transmissão, frequentemente o meio de transmissão é a Internet.
+
+Agora, no lado do destinatário, existe processo de Desencapsulação.
+
+### Desencapsulamento
+A camada física lê cada um dos Bits e interpretá-los como um Frame, e transfere-o para a camada de conexão de dados, onde tanto o cabeçalho do Frame quanto um resumo são checados, se o endereço MAC é checado e nenhum erro é encontrado, o Frame é descartado e o pacote IP é retirado e entregue para a camada de rede.
+Na camada de rede, o endereço IP é examinado e checado, e se o endereço IP coincide, o Segmento é retirado do pacote IP e o endereço IP é retirado, o segmento é então passado para a camada de Transporte.
+Na camada de transporte, onde o cabeçalho do segmento é examinado, um número do porta é olhado e o segmento é então movido para a aplicação apropriada pelo número da porta. Nesse ponto, um endereço ID é usado, qualquer descompressão e decodificação no algoritmo é aplicado se for o caso, e criptografia é removida, e o dado é restaurado para a forma original, onde então é apresentado para a camada de aplicação.
+
+### Conclusão
+Para finalizar, encapsulamento de dados se trata de um processo de criar e empacotar os dados do usuário com controle da informação, camada por camada. E desencapsulamento de dados se trata de retirar as informações de controle e restaurar os dados originais do usuário.
