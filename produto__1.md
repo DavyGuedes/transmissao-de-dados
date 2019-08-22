@@ -14,9 +14,11 @@
 
 ## Introdução
 
-Temos dispositivos como:
+The Internet is a computer network that interconnects hundreds of millions of com-
+puting devices throughout the world. Not too long ago, these computing devices were
+primarily traditional desktop PCs, Linux workstations, and so-called servers t
+A Internet é  uma rede de computadores  que interconecta  milhões de dispositivos computacionais ao redor do mundo. Não há  muito tempo, esses dispositivos eram principalmente computadores de mesa, estações  de trabalho Linux e os tão falados servidores, surgindo outros tipo no decorrer do tempo, como:
 
-- servidores, computadores de mesa, impressoras etc
 - dispositivos celulares, videogames etc
 - e dispositivos não convencionais, como uma lâmpada elétrica, cortinas inteligentes e outros aparelhos conectados a rede no contexto da __Internet das Coisas__
 
