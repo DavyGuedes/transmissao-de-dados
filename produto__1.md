@@ -144,7 +144,7 @@ __Ideia chave:__
 - Protocolos usados: Ethernet, Wi-Fi, ATM, frame relay.
 - Frame é chamado o conjunto dos dois endereçamentos e do segmento de dados junto com sua cauda.
 - Um frame é transmitido ao outro computador pelos seguintes meios: cabo de cobre, fibra ótica ou ar.
-- Funções da camada: acessar a mídia (cabo, fibra ótica ou ar) por uma técnica chamada framing (com o uso dos frames) (IMAGEM), controlar como os dados são recebidos da mídia (media access control & error detection).
+- Funções da camada: acessar a mídia (cabo, fibra ótica ou ar) por uma técnica chamada framing (com o uso dos frames), controlar como os dados são recebidos da mídia (media access control & error detection).
 
 ### Camada Física:
 - Os sinais são transmitidos de acordo com o meio:
