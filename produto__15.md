@@ -4,6 +4,21 @@
 >
 >Professor De. Emanuel B. Rodrigues
 
+- [Transmissão síncrona e assíncrona](#transmiss%c3%a3o-s%c3%adncrona-e-ass%c3%adncrona)
+  - [Equipe](#equipe)
+  - [Introdução](#introdu%c3%a7%c3%a3o)
+    - [Ideia chave](#ideia-chave)
+  - [Técnicas de Transmissão](#t%c3%a9cnicas-de-transmiss%c3%a3o)
+    - [Exemplificação](#exemplifica%c3%a7%c3%a3o)
+  - [Transmissão Assíncrona](#transmiss%c3%a3o-ass%c3%adncrona)
+    - [(a) Formato de caractere](#a-formato-de-caractere)
+    - [(b) Fluxo assíncrono de caracteres de 8 bits](#b-fluxo-ass%c3%adncrono-de-caracteres-de-8-bits)
+    - [(c) Efeito de erro no *timing*](#c-efeito-de-erro-no-timing)
+    - [Tranmissão Assíncrona: Conclusão](#tranmiss%c3%a3o-ass%c3%adncrona-conclus%c3%a3o)
+  - [Transmissão Síncrona](#transmiss%c3%a3o-s%c3%adncrona)
+  - [Imagens Resumo](#imagens-resumo)
+  - [Bibliografia](#bibliografia)
+
 ## Equipe
 
 - Marcos Davy
@@ -97,11 +112,11 @@ Existem duas abordagens comuns para alcançar a transmissão desejada: Uma delas
 ### (a) Formato de caractere
 
 1. O **estado ocioso** é o equivalente ao sinal transmitido na linha permanecer com valor ‘um (1)’. Por isso é utilizado NRZ-L, onde sinal ocioso será a presença do valor de faixa negativo da linha de transmissão;
-1. O começo de um caractere é sinalizado por um **bit inicial** com o valor ‘zero (0)’, então é seguido por 5 a 8 bits que fazem o caractere, definidos pela convenção de código usada;
-1. Os bits do caractere são transmitidos começando com o bit menos significativo;
-1. O **bit de paridade** é atribuído para o transmissor de modo que o número total de ‘uns (1)’ que está no mesmo caractere, incluindo o bit de paridade, é ímpar ou par, dependendo da convenção usada, o receptor irá usá-lo para a detecção de erro;
-1. O último elemento é o **elemento de parada**, que é o retorno do valor ‘1’ no sinal de transmissão. Um comprimento mínimo para o **elemento de parada** é então especificado, e é frequentemente um, um e meio ou duas vezes a duração que um bit ordinário demora a ser enviado. Nota-se que nenhum valor máximo é especificado (devido ao sinal ser assíncrono);
-1. Por o elemento de parada ser o mesmo do estado ocioso (valor ‘1’ na linha de transmissão), o transmissor irá continuar transmitindo o elemento de parada até estar pronto para enviar o próximo sinal;
+2. O começo de um caractere é sinalizado por um **bit inicial** com o valor ‘zero (0)’, então é seguido por 5 a 8 bits que fazem o caractere, definidos pela convenção de código usada;
+3. Os bits do caractere são transmitidos começando com o bit menos significativo;
+4. O **bit de paridade** é atribuído para o transmissor de modo que o número total de ‘uns (1)’ que está no mesmo caractere, incluindo o bit de paridade, é ímpar ou par, dependendo da convenção usada, o receptor irá usá-lo para a detecção de erro;
+5. O último elemento é o **elemento de parada**, que é o retorno do valor ‘1’ no sinal de transmissão. Um comprimento mínimo para o **elemento de parada** é então especificado, e é frequentemente um, um e meio ou duas vezes a duração que um bit ordinário demora a ser enviado. Nota-se que nenhum valor máximo é especificado (devido ao sinal ser assíncrono);
+6. Por o elemento de parada ser o mesmo do estado ocioso (valor ‘1’ na linha de transmissão), o transmissor irá continuar transmitindo o elemento de parada até estar pronto para enviar o próximo sinal;
 
 ### (b) Fluxo assíncrono de caracteres de 8 bits
 
