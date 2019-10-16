@@ -4,20 +4,19 @@
 >
 >Professor De. Emanuel B. Rodrigues
 
-- [Transmissão síncrona e assíncrona](#transmiss%c3%a3o-s%c3%adncrona-e-ass%c3%adncrona)
-  - [Equipe](#equipe)
-  - [Introdução](#introdu%c3%a7%c3%a3o)
-    - [Ideia chave](#ideia-chave)
-  - [Técnicas de Transmissão](#t%c3%a9cnicas-de-transmiss%c3%a3o)
-    - [Exemplificação](#exemplifica%c3%a7%c3%a3o)
-  - [Transmissão Assíncrona](#transmiss%c3%a3o-ass%c3%adncrona)
-    - [(a) Formato de caractere](#a-formato-de-caractere)
-    - [(b) Fluxo assíncrono de caracteres de 8 bits](#b-fluxo-ass%c3%adncrono-de-caracteres-de-8-bits)
-    - [(c) Efeito de erro no *timing*](#c-efeito-de-erro-no-timing)
-    - [Tranmissão Assíncrona: Conclusão](#tranmiss%c3%a3o-ass%c3%adncrona-conclus%c3%a3o)
-  - [Transmissão Síncrona](#transmiss%c3%a3o-s%c3%adncrona)
-  - [Imagens Resumo](#imagens-resumo)
-  - [Bibliografia](#bibliografia)
+
+- [Introdução](#introdu%c3%a7%c3%a3o)
+  - [Ideia chave](#ideia-chave)
+- [Técnicas de Transmissão](#t%c3%a9cnicas-de-transmiss%c3%a3o)
+  - [Exemplificação](#exemplifica%c3%a7%c3%a3o)
+- [Transmissão Assíncrona](#transmiss%c3%a3o-ass%c3%adncrona)
+  - [(a) Formato de caractere](#a-formato-de-caractere)
+  - [(b) Fluxo assíncrono de caracteres de 8 bits](#b-fluxo-ass%c3%adncrono-de-caracteres-de-8-bits)
+  - [(c) Efeito de erro no *timing*](#c-efeito-de-erro-no-timing)
+  - [Tranmissão Assíncrona: Conclusão](#tranmiss%c3%a3o-ass%c3%adncrona-conclus%c3%a3o)
+- [Transmissão Síncrona](#transmiss%c3%a3o-s%c3%adncrona)
+- [Imagens Resumo](#imagens-resumo)
+- [Bibliografia](#bibliografia)
 
 ## Equipe
 
