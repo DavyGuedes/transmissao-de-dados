@@ -97,7 +97,7 @@ Existem duas abordagens comuns para alcançar a transmissão desejada: Uma delas
 >
 > Figure taken from "Data and Computer Communications, 8ª edition" by William Stallings
 
-- **Non-return-to-zero level (NRZ-L)** é um código binário no qual os ‘uns (1)’ são representados por uma voltagem positiva, enquanto os ‘zeros (0)’ são representados por voltagem negativa, sem condição de repouso.
+- **Non-return-to-zero level (NRZ-L)** é um código binário no qual os ‘uns (1)’ são representados por uma voltagem negativa, enquanto os ‘zeros (0)’ são representados por voltagem positiva, sem condição de repouso.
 
 !["Character format"](./produto__15-image__003.png)
 > (a) Formato de caractere
